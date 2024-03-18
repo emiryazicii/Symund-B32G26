@@ -2,8 +2,6 @@
 
 Welcome to the pinnacle of automation testing excellence for symun.com! Our mission is to ensure flawlessness and reliability in every facet of the symun.com experience through cutting-edge automation.
 
-[![Build Status](https://img.shields.io/github/workflow/status/yourusername/yourrepositoryname/CI)](https://github.com/yourusername/yourrepositoryname/actions)
-[![Coverage](https://img.shields.io/codecov/c/github/yourusername/yourrepositoryname)](https://codecov.io/gh/yourusername/yourrepositoryname)
 
 ## 🚀 Features
 
