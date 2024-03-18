@@ -3,6 +3,7 @@ package com.symund.step_definitions;
 import com.symund.pages.DeckPage;
 import com.symund.pages.LoginPage;
 import com.symund.utilities.ConfigurationReader;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,13 +11,11 @@ import org.junit.Assert;
 
 public class DeckModuleFunctionalityStepDefs {
 
-    LoginPage loginPage = new LoginPage();
     DeckPage deckPage = new DeckPage();
 
-    @Given("the user is on the Deck Module page")
-    public void the_user_is_on_the_deck_module_page() {
+    @And("the user navigates to the Deck Module page")
+    public void the_user_navigates_to_the_deck_module_page() {
 
-        loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
         deckPage.navigateToPage("deck");
 
     }
