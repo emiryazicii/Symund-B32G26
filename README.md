@@ -1,6 +1,6 @@
 # Automated Testing Excellence for Symun.com
 
-Welcome to the pinnacle of automation testing excellence for symun.com! Our mission is to ensure flawlessness and reliability in every facet of the symun.com experience through cutting-edge automation.
+Welcome to the pinnacle of automation testing excellence for symun.com! Our mission is to ensure flawlessness and reliability in every facet of the symund.com experience through cutting-edge automation.
 
 
 ## 🚀 Features
