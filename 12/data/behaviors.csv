@@ -1,0 +1,3 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Login function","the user logged in with valid credentials","0","0","0","1","0"
+"","Deck Management","User can create a new board","0","0","0","1","0"
