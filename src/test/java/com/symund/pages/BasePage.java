@@ -16,8 +16,8 @@ public abstract class BasePage {
     @FindBy(css = "ul#appmenu li")
     private List<WebElement> menuItems;
 
-    // Method to navigate to a specific page from the menu by its data-id attribute's value
-    public void navigateToPage(String linkDataID) {
+    // Method to navigate to a specific page from the menu by module name.
+    public void navigateToPage(String moduleName) {
         // Iterate through each menu item
         for (WebElement menuItem : menuItems) {
             // Check if the menu item's data-id attribute's value matches the desired link data-id
