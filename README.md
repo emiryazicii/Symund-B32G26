@@ -2,7 +2,7 @@ Allure Reports Link : https://emiryazicii.github.io/Symund-B32G26/
 
 # Automated Testing Excellence for symund.com
 
-Welcome to the pinnacle of automation testing excellence for symun.com! Our mission is to ensure flawlessness and reliability in every facet of the symund.com experience through cutting-edge automation.
+Welcome to the pinnacle of automation testing excellence for symund.com! Our mission is to ensure flawlessness and reliability in every facet of the symund.com experience through cutting-edge automation.
 
 
 ## 🚀 Features
