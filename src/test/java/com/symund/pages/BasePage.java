@@ -21,7 +21,7 @@ public abstract class BasePage {
         // Iterate through each menu item
         for (WebElement menuItem : menuItems) {
             // Check if the menu item's data-id attribute's value matches the desired link data-id
-            if (menuItem.getAttribute("data-id").equals(linkDataID.toLowerCase())) {
+            if (menuItem.getAttribute("data-id").equals(moduleName.toLowerCase())) {
                 // Click on the menu item to navigate
                 menuItem.click();
                 // Exit the loop once the link is clicked
