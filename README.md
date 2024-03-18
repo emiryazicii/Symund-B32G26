@@ -1,4 +1,4 @@
-# Automated Testing Excellence for Symun.com
+# Automated Testing Excellence for symund.com
 
 Welcome to the pinnacle of automation testing excellence for symun.com! Our mission is to ensure flawlessness and reliability in every facet of the symund.com experience through cutting-edge automation.
 
@@ -6,7 +6,7 @@ Welcome to the pinnacle of automation testing excellence for symun.com! Our miss
 ## 🚀 Features
 
 - **State-of-the-Art Testing**: Experience unparalleled testing precision with Selenium, Cucumber, and Allure.
-- **Exquisite Reliability**: Guaranteeing top-notch quality for symun.com's functionalities.
+- **Exquisite Reliability**: Guaranteeing top-notch quality for symund.com's functionalities.
 - **Effortless Workflow**: Empower your team with seamless testing automation for maximum efficiency.
 
 ## 📈 Analytics
@@ -21,7 +21,7 @@ Welcome to the pinnacle of automation testing excellence for symun.com! Our miss
 
 ## 🌟 User Experience
 
-- **Enhanced User Experience**: Our testing suite guarantees a seamless and error-free user experience for symun.com visitors.
+- **Enhanced User Experience**: Our testing suite guarantees a seamless and error-free user experience for symund.com visitors.
 - **Cross-Browser Compatibility**: Test symund.com across multiple browsers to ensure consistent performance and user experience.
 
 ## 🤖 Automation
