@@ -32,10 +32,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <!-- Configure test execution -->
-                    <parallel>methods</parallel>
+                    <!-- Remove or adjust parallel testing configuration -->
+                    <!-- <parallel>methods</parallel>
                     <threadCount>4</threadCount>
-                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount> -->
                     <!-- Ignore test failures but continue with the build -->
                     <testFailureIgnore>true</testFailureIgnore>
                     <!-- Include test classes matching the specified pattern -->
