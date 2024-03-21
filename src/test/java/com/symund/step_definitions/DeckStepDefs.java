@@ -16,6 +16,11 @@ public class DeckStepDefs {
         deckPage.navigateToPage("deck");
     }
 
+    @Given("the user clicks on app navigation toggle")
+    public void the_user_clicks_on_app_navigation_toggle() {
+        deckPage.clickAppNavigationToggle();
+    }
+
     @When("the user creates a new board with name {string}")
     public void the_user_creates_a_new_board_with_name(String boardName) {
         deckPage.createNewBoard(boardName);
@@ -44,5 +49,21 @@ public class DeckStepDefs {
     @Then("the new card {string} should be visible in list {string}")
     public void the_new_card_task_should_be_visible_in_list(String cardName, String listName) {
         Assert.assertTrue(deckPage.isCardVisibleUnderList(cardName,listName));
+    }
+
+    @When("the user clicks on any board with name {string}")
+    public void the_user_clicks_on_board_with_name(String boardName) {
+        deckPage.clickOnBoard(boardName);
+    }
+
+    @When("the user clicks {string} button to assigns the card {string} to themselves on list {string}")
+    public void the_user_clicks_button_to_assigns_the_card_to_themselves_on_list(String buttonName, String cardName,String listName) {
+        deckPage.clickCardMenuButton(cardName,listName);
+        deckPage.clickButtonFromCardMenu(buttonName);
+    }
+
+    @Then("the card {string} should be assigned to the current user")
+    public void the_card_should_be_assigned_to_current_user(String cardName) {
+        Assert.assertTrue(deckPage.isCardAssignToUser(cardName));
     }
 }
