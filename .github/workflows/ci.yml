@@ -29,9 +29,6 @@ jobs:
       - run: chrome --version
 
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
-
-      - name: Build with Maven
         run: mvn -B clean test
 
       - uses: actions/upload-artifact@master
