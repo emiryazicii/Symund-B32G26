@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Mar 21 07:03:10 GMT 2024","Thu Mar 21 07:03:22 GMT 2024","12076","","Deck Management","","User can create a new board","","User can create a new board","  User Story :
+
+  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Thu Mar 21 07:03:22 GMT 2024","Thu Mar 21 07:03:30 GMT 2024","7831","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
