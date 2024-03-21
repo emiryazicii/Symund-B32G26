@@ -20,8 +20,10 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
 
                 // Enables Allure reporting
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 
+                // Generates JSON report for Cucumber results in the specified directory
+                "json:target/cucumber.json"
         },
 
         // Specifies the location of feature files
