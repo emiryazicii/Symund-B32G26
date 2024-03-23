@@ -3,7 +3,10 @@ package com.symund.pages;
 import com.symund.utilities.BrowserUtils;
 import com.symund.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -113,4 +116,105 @@ public class FilesPage extends BasePage {
         return false;
 
     }
+
+
+
+
+
+                //****************Abe's part*********************************
+
+
+    @FindBy(xpath = "//a[@class='name']/span/span[.='Hello World']/../following-sibling::span/a[@class='action action-menu permanent']")
+    private WebElement threeDots;
+
+
+    @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-favorite permanent']")
+    private WebElement addToFavorites;
+
+
+    @FindBy(xpath = "//div[@id='app-navigation']/ul/li/a[@class='nav-icon-favorites svg']")
+    private WebElement favoritePage;
+
+
+    @FindBy(xpath = "//td[@class='filename']/a/span/span[.='Hello World']")
+    private WebElement fileOnFavoritePage;
+
+
+    @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-details permanent']")
+    private WebElement detailsFile;
+
+    @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-rename permanent']")
+    private WebElement renameFile;
+
+    @FindBy(xpath = "//a[@id='comments']")
+    private WebElement commentsButton;
+
+    @FindBy(xpath = "//div[@placeholder='Write message, @ to mention someone …']")
+    private WebElement commentsSection;
+
+    Actions action = new Actions(Driver.getDriver());
+
+
+
+
+    public void clickOnThreeDots(){
+        threeDots.click();
+    }
+    public void clickOnAddToFavorites(){
+        addToFavorites.click();
+    }
+
+
+    public void checkIfFileDisplayed(){
+        favoritePage.click();
+        fileOnFavoritePage.isDisplayed();
+    }
+
+
+
+    public void renameFileName(String fileName, String renamedFile){
+        WebElement threeDotButton = Driver.getDriver().findElement(
+                By.xpath("//a[@class='name']/span/span[.='"+fileName+"']/../following-sibling::span/a[@class='action action-menu permanent']"));
+        threeDotButton.click();
+        renameFile.click();
+        action.sendKeys(Keys.BACK_SPACE).sendKeys(renamedFile).sendKeys(Keys.ENTER).perform();
+        BrowserUtils.waitFor(3);
+    }
+
+
+    public boolean isFileNameUpdated(String updatedFileName){
+        WebElement renamedFile = Driver.getDriver().findElement
+                (By.xpath("//td/a[@class='name']/div/following-sibling::span/span[.='"+updatedFileName+"']"));
+        BrowserUtils.waitFor(2);
+
+        return renamedFile.isDisplayed();
+    }
+
+    public void detailsFile(String fileName){
+        WebElement threeDotButton = Driver.getDriver().findElement(
+                By.xpath("//a[@class='name']/span/span[.='"+fileName+"']/../following-sibling::span/a[@class='action action-menu permanent']"));
+        threeDotButton.click();
+        detailsFile.click();
+
+    }
+
+    public void clickOnCommentButton(){
+        commentsButton.click();
+    }
+
+    public void addCommentUnderFile(String comment){
+        commentsSection.click();
+        action.sendKeys(comment).sendKeys(Keys.ENTER).perform();
+
+    }
+
+    public boolean isCommentAdded(String comment){
+        WebElement addedComment = Driver.getDriver().findElement(By.xpath("//div/div[.='"+comment+"']"));
+        BrowserUtils.waitFor(2);
+
+    return addedComment.isDisplayed();
+    }
+
 }
+
+
