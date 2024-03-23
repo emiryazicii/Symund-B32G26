@@ -83,6 +83,64 @@ public class FilesStepDefs {
         Assert.assertTrue(filesPage.isNumberOfFoldersAndFilesEqual());
 
     }
+
+
+
+    //********************************ABE's PART**************************************************
+
+    @Given("user navigates to File page")
+    public void user_navigates_to_file_page() {
+        filesPage.navigateToPage("files");
+    }
+    @When("user clicks three dots for file Hello World")
+    public void user_clicks_three_dots_for_file_hello_world() {
+        filesPage.clickOnThreeDots();
+    }
+    @When("user clicks to Add to favorites")
+    public void user_clicks_to_add_to_favorites() {
+        filesPage.clickOnAddToFavorites();
+
+
+    }
+    @Then("file Hello World should be under Favorite page")
+    public void file_hello_world_should_be_under_favorite_page() {
+        filesPage.checkIfFileDisplayed();
+        BrowserUtils.verifyTitle("Favorites - Symund - QA");
+
+
+    }
+    @When("user choose Rename file name {string} to file name {string}")
+    public void userChooseRenameFileNameToFileName(String fileName, String updatedFileName) {
+        filesPage.renameFileName(fileName,updatedFileName);
+    }
+
+
+    @Then("user should see updated file name {string}")
+    public void userShouldSeeUpdatedFileName(String updatedFileName) {
+          Assert.assertTrue(filesPage.isFileNameUpdated(updatedFileName));
+    }
+
+
+    @When("user choose Details on the file {string}")
+    public void userChooseDetailsOnTheFile(String fileName) {
+        filesPage.detailsFile(fileName);
+    }
+
+    @And("user click on Comment button")
+    public void userClickOnCommentButton() {
+        filesPage.clickOnCommentButton();
+    }
+
+    @And("user ads comment {string}")
+    public void userAdsComment(String comment) {
+        filesPage.addCommentUnderFile(comment);
+
+    }
+
+    @Then("user should see comment {string} under the comment section")
+   public void userShouldSeeCommentUnderTheCommentSection(String comment) {
+        Assert.assertTrue(filesPage.isCommentAdded(comment));
+   }
 }
 
 
