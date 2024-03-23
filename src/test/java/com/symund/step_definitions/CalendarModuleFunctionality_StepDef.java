@@ -13,6 +13,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class CalendarModuleFunctionality_StepDef {
     CalendarPage calendarPage = new CalendarPage();
@@ -29,11 +30,13 @@ public class CalendarModuleFunctionality_StepDef {
     @When("user clicks to the Daily calendar")
     public void user_clicks_to_the_daily_calendar() {
 
+        BrowserUtils.waitFor(2);
         calendarPage.dailyCalendar.click();
     }
     @Then("Daily Calendar should be visible on the page")
     public void daily_calendar_should_be_visible_on_the_page() {
 
+        BrowserUtils.waitFor(2);
         String dailyCalendarURL = Driver.getDriver().getCurrentUrl();
         String expectedInDailyURL = "timeGridDay";
         Assert.assertTrue(dailyCalendarURL.contains(expectedInDailyURL));
@@ -41,11 +44,13 @@ public class CalendarModuleFunctionality_StepDef {
     @When("user clicks to the Weekly calendar")
     public void user_clicks_to_the_weekly_calendar() {
 
+        BrowserUtils.waitFor(2);
         calendarPage.weeklyCalendar.click();
     }
     @Then("Weekly Calendar should be visible on the page")
     public void weekly_calendar_should_be_visible_on_the_page() {
 
+        BrowserUtils.waitFor(2);
         String weeklyCalendarURL = Driver.getDriver().getCurrentUrl();
         String expectedInWeeklyURL = "timeGridWeek";
         Assert.assertTrue(weeklyCalendarURL.contains(expectedInWeeklyURL));
