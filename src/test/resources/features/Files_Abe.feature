@@ -12,13 +12,16 @@ Feature: Add File To Favorites Rename Add Comment
 
 
 
-  Scenario:
-    When user clicks three dots for file Hello World
-    And  user clicks to Add to favorites
-    Then file Hello World should be under Favorite page
 
-
-
+@wip
+  Scenario Outline:
+    When user choose Add to favorites for file "<fileName>"
+    Then user should see "<fileName>" under Favorite Page
+    Examples:
+      | fileName    |
+      | Talk        |
+      | Hello World |
+      | Readme      |
 
 
   Scenario Outline:

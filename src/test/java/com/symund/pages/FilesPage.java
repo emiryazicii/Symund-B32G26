@@ -122,23 +122,11 @@ public class FilesPage extends BasePage {
 
 
                 //****************Abe's part*********************************
-
-
-    @FindBy(xpath = "//a[@class='name']/span/span[.='Hello World']/../following-sibling::span/a[@class='action action-menu permanent']")
-    private WebElement threeDots;
-
-
     @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-favorite permanent']")
     private WebElement addToFavorites;
 
-
     @FindBy(xpath = "//div[@id='app-navigation']/ul/li/a[@class='nav-icon-favorites svg']")
     private WebElement favoritePage;
-
-
-    @FindBy(xpath = "//td[@class='filename']/a/span/span[.='Hello World']")
-    private WebElement fileOnFavoritePage;
-
 
     @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-details permanent']")
     private WebElement detailsFile;
@@ -155,21 +143,20 @@ public class FilesPage extends BasePage {
     Actions action = new Actions(Driver.getDriver());
 
 
-
-
-    public void clickOnThreeDots(){
-        threeDots.click();
-    }
-    public void clickOnAddToFavorites(){
+    public void addToFavoriesFile(String fileName){
+        WebElement threeDotButton = Driver.getDriver().findElement(
+                By.xpath("//a[@class='name']/span/span[.='"+fileName+"']/../following-sibling::span/a[@class='action action-menu permanent']"));
+        threeDotButton.click();
         addToFavorites.click();
     }
 
-
-    public void checkIfFileDisplayed(){
+    public boolean isFileAddedToFavorites (String fileName){
         favoritePage.click();
-        fileOnFavoritePage.isDisplayed();
-    }
+        WebElement fileOnFavoritepage = Driver.getDriver().findElement
+                (By.xpath("//td[@class='filename']/a/span/span[.='"+ fileName +"']"));
 
+        return fileOnFavoritepage.isDisplayed();
+    }
 
 
     public void renameFileName(String fileName, String renamedFile){

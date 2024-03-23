@@ -92,23 +92,17 @@ public class FilesStepDefs {
     public void user_navigates_to_file_page() {
         filesPage.navigateToPage("files");
     }
-    @When("user clicks three dots for file Hello World")
-    public void user_clicks_three_dots_for_file_hello_world() {
-        filesPage.clickOnThreeDots();
+
+    @When("user choose Add to favorites for file {string}")
+    public void userChooseAddToFavoritesForFile(String fileName) {
+        filesPage.addToFavoriesFile(fileName);
     }
-    @When("user clicks to Add to favorites")
-    public void user_clicks_to_add_to_favorites() {
-        filesPage.clickOnAddToFavorites();
 
-
+    @Then("user should see {string} under Favorite Page")
+    public void userShouldSeeUnderFavoritePage(String fileName) {
+        Assert.assertTrue(filesPage.isFileAddedToFavorites(fileName));
     }
-    @Then("file Hello World should be under Favorite page")
-    public void file_hello_world_should_be_under_favorite_page() {
-        filesPage.checkIfFileDisplayed();
-        BrowserUtils.verifyTitle("Favorites - Symund - QA");
 
-
-    }
     @When("user choose Rename file name {string} to file name {string}")
     public void userChooseRenameFileNameToFileName(String fileName, String updatedFileName) {
         filesPage.renameFileName(fileName,updatedFileName);
@@ -141,6 +135,8 @@ public class FilesStepDefs {
    public void userShouldSeeCommentUnderTheCommentSection(String comment) {
         Assert.assertTrue(filesPage.isCommentAdded(comment));
    }
+
+
 }
 
 
