@@ -137,6 +137,23 @@ public class FilesStepDefs {
    }
 
 
+
+    @When("all test passed file {string} removes from favorite")
+    public void allTestPassedFileRemovesFromFavorite(String updatedFileName) {
+        filesPage.cleanUpFavorites(updatedFileName);
+    }
+
+    @And("user should delete folder Grisha")
+    public void userShouldDeleteFolderGrisha() {
+        filesPage.deleteGrisha();
+
+    }
+
+
+    //@And("should delete folder Grisha")
+    //public void shouldDeleteFolderGrisha() {
+    //}
+
 }
 
 
