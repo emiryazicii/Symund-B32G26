@@ -122,23 +122,11 @@ public class FilesPage extends BasePage {
 
 
                 //****************Abe's part*********************************
-
-
-    @FindBy(xpath = "//a[@class='name']/span/span[.='Hello World']/../following-sibling::span/a[@class='action action-menu permanent']")
-    private WebElement threeDots;
-
-
     @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-favorite permanent']")
     private WebElement addToFavorites;
 
-
     @FindBy(xpath = "//div[@id='app-navigation']/ul/li/a[@class='nav-icon-favorites svg']")
     private WebElement favoritePage;
-
-
-    @FindBy(xpath = "//td[@class='filename']/a/span/span[.='Hello World']")
-    private WebElement fileOnFavoritePage;
-
 
     @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-details permanent']")
     private WebElement detailsFile;
@@ -152,32 +140,34 @@ public class FilesPage extends BasePage {
     @FindBy(xpath = "//div[@placeholder='Write message, @ to mention someone …']")
     private WebElement commentsSection;
 
+    @FindBy(xpath = "//div/ul/li/a[@class='menuitem action action-delete permanent']" )
+    private WebElement deleteFile;
+
     Actions action = new Actions(Driver.getDriver());
 
 
-
-
-    public void clickOnThreeDots(){
-        threeDots.click();
-    }
-    public void clickOnAddToFavorites(){
+    public void addToFavoriesFile(String fileName){
+        WebElement threeDotButton = Driver.getDriver().findElement(
+                By.xpath("//a[@class='name']/span/span[.='"+fileName+"']/../following-sibling::span/a[@class='action action-menu permanent']"));
+        threeDotButton.click();
         addToFavorites.click();
     }
 
-
-    public void checkIfFileDisplayed(){
+    public boolean isFileAddedToFavorites (String fileName){
         favoritePage.click();
-        fileOnFavoritePage.isDisplayed();
+        WebElement fileOnFavoritepage = Driver.getDriver().findElement
+                (By.xpath("//td[@class='filename']/a/span/span[.='"+ fileName +"']"));
+
+        return fileOnFavoritepage.isDisplayed();
     }
 
 
-
-    public void renameFileName(String fileName, String renamedFile){
+    public void renameFileName(String fileName, String updatedFileName){
         WebElement threeDotButton = Driver.getDriver().findElement(
                 By.xpath("//a[@class='name']/span/span[.='"+fileName+"']/../following-sibling::span/a[@class='action action-menu permanent']"));
         threeDotButton.click();
         renameFile.click();
-        action.sendKeys(Keys.BACK_SPACE).sendKeys(renamedFile).sendKeys(Keys.ENTER).perform();
+        action.sendKeys(Keys.BACK_SPACE).sendKeys(updatedFileName).sendKeys(Keys.ENTER).perform();
         BrowserUtils.waitFor(3);
     }
 
@@ -215,6 +205,47 @@ public class FilesPage extends BasePage {
     return addedComment.isDisplayed();
     }
 
-}
+
+    public void cleanUpFavorites(String updatedFileName){
+        addToFavoriesFile(updatedFileName);
+    }
+
+
+
+    /*  THIS METHOD NEVER CLICKED ON DELETE BUTTON FOR COMMENT
+    public void removeComments(String comment,String updatedFileName){
+        BrowserUtils.waitFor(2);
+        WebElement threeDotButton = Driver.getDriver().findElement(
+                By.xpath("//a[@class='name']/span/span[.='"+updatedFileName+"']/../following-sibling::span/a[@class='action action-menu permanent']"));
+        threeDotButton.click();
+        detailsFile.click();
+        clickOnCommentButton();
+        WebElement threeDotsComments = Driver.getDriver().findElement(By.xpath("//div[@class='comment comments__list']/div[.='"+comment+"']/preceding-sibling::div/div[@class='action-item comment__actions']/div"));
+        threeDotsComments.click();
+        BrowserUtils.waitFor(2);
+        WebElement deleteComment = Driver.getDriver().findElement(By.cssSelector("li>button>span[class='action-button__icon icon-delete']"));
+        BrowserUtils.waitFor(2);
+
+         //action.moveToElement(deleteComment).pause(2).perform();
+
+         BrowserUtils.clickWithJS(deleteComment);
+        //BrowserUtils.waitFor(2);
+       // action.sendKeys(Keys.ENTER).perform();
+
+    }
+*/
+
+    public void deleteGrisha(){
+        WebElement threeDotButton = Driver.getDriver().findElement(
+                By.xpath("//a[@class='name']/span/span[.='Grisha']/../following-sibling::span/a[@class='action action-menu permanent']"));
+        BrowserUtils.waitFor(2);
+        threeDotButton.click();
+        BrowserUtils.waitFor(2);
+        deleteFile.click();
+
+
+    }
+
+    }
 
 
