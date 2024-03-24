@@ -1,1 +1,0 @@
-[{"uid":"4ed15b7fcfee32af","name":"the user logged in with valid credentials","time":{"start":1710805293524,"stop":1710805294430,"duration":906},"status":"skipped","severity":"normal"},{"uid":"cf06645293827716","name":"User can create a new board","time":{"start":1710805293521,"stop":1710805294494,"duration":973},"status":"skipped","severity":"normal"}]
