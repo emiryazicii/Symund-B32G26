@@ -62,3 +62,7 @@ Feature: Deck Management
       | Marketing Campaigns    | Content Calendar     | Social Media Plan |
       | Financial Planning     | Budget Breakdown     | Expense Tracking  |
       | Operational Excellence | Process Improvements | Lean Six Sigma    |
+
+  @deleteAllBoards
+  Scenario: User can delete all boards
+    Given user deletes all the boards

@@ -4,8 +4,10 @@ import com.symund.utilities.BrowserUtils;
 import com.symund.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import java.util.List;
 
 public class DeckPage extends BasePage {
@@ -13,6 +15,8 @@ public class DeckPage extends BasePage {
     public DeckPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+    Actions actions = new Actions(Driver.getDriver());
 
     @FindBy(css = "span[title='Add board']")
     private WebElement addBoardModule;
@@ -53,13 +57,13 @@ public class DeckPage extends BasePage {
      * @param cardName The name of the card.
      * @param listName The name of the list containing the card.
      */
-    public void clickCardMenuButton(String cardName,String listName){
+    public void clickCardMenuButton(String cardName, String listName) {
 
         WebElement cardMenuButton = Driver.getDriver().findElement(
-                By.xpath("//h3[contains(text(),'"+listName+"')]" +
-                        "/../..//span[contains(text(),'"+cardName+"')]/../../..//button"));
+                By.xpath("//h3[contains(text(),'" + listName + "')]" +
+                        "/../..//span[contains(text(),'" + cardName + "')]/../../..//button"));
 
-        BrowserUtils.waitForClickable(cardMenuButton,10);
+        BrowserUtils.waitForClickable(cardMenuButton, 10);
         cardMenuButton.click();
     }
 
@@ -68,12 +72,12 @@ public class DeckPage extends BasePage {
      *
      * @param buttonName The name of the button in the card menu.
      */
-    public void clickButtonFromCardMenu(String buttonName){
+    public void clickButtonFromCardMenu(String buttonName) {
 
         WebElement anyButtonFromCardMenu = Driver.getDriver().findElement(
-                By.xpath("//span[contains(text(),'"+buttonName+"')]"));
+                By.xpath("//span[contains(text(),'" + buttonName + "')]"));
 
-        BrowserUtils.waitForClickable(anyButtonFromCardMenu,10);
+        BrowserUtils.waitForClickable(anyButtonFromCardMenu, 10);
         anyButtonFromCardMenu.click();
     }
 
@@ -83,12 +87,12 @@ public class DeckPage extends BasePage {
      * @param cardName The name of the card.
      * @return True if the card is assigned to the current user, false otherwise.
      */
-    public boolean isCardAssignToUser(String cardName){
+    public boolean isCardAssignToUser(String cardName) {
 
         WebElement userAvatarInCard = Driver.getDriver().findElement(
-                By.xpath("//span[contains(text(),'"+cardName+"')]/../../..//img"));
+                By.xpath("//span[contains(text(),'" + cardName + "')]/../../..//img"));
 
-        BrowserUtils.waitForVisibility(userAvatarInCard,10);
+        BrowserUtils.waitForVisibility(userAvatarInCard, 10);
         return userAvatarInCard.isDisplayed();
 
     }
@@ -103,7 +107,7 @@ public class DeckPage extends BasePage {
         WebElement board = Driver.getDriver().findElement(
                 By.xpath("//span[@title='" + boardName + "']/.."));
 
-        BrowserUtils.waitForClickable(board,10);
+        BrowserUtils.waitForClickable(board, 10);
         board.click();
     }
 
@@ -115,9 +119,9 @@ public class DeckPage extends BasePage {
     public void clickAddCardButtonByListName(String listName) {
 
         WebElement addButton = Driver.getDriver().findElement(
-                By.xpath("//h3[contains(text(),'"+listName+"')]/../button"));
+                By.xpath("//h3[contains(text(),'" + listName + "')]/../button"));
 
-        BrowserUtils.waitForClickable(addButton,10);
+        BrowserUtils.waitForClickable(addButton, 10);
         addButton.click();
     }
 
@@ -132,7 +136,7 @@ public class DeckPage extends BasePage {
         WebElement list = Driver.getDriver().findElement(
                 By.xpath("//div[@class='stack__header']//h3[contains(text(),'" + listName + "')]"));
 
-        BrowserUtils.waitForVisibility(list,10);
+        BrowserUtils.waitForVisibility(list, 10);
         return list.isDisplayed();
     }
 
@@ -147,7 +151,7 @@ public class DeckPage extends BasePage {
         WebElement board = Driver.getDriver().findElement(
                 By.xpath("//span[@title='" + boardName + "']"));
 
-        BrowserUtils.waitForVisibility(board,10);
+        BrowserUtils.waitForVisibility(board, 10);
 
         for (WebElement eachBoard : allBoardsInList) {
             if (eachBoard.getText().equals(boardName)) {
@@ -179,7 +183,7 @@ public class DeckPage extends BasePage {
      * Creates a new list under a specified board.
      *
      * @param boardName The name of the board to create the list under.
-     * @param listName The name of the new list to create.
+     * @param listName  The name of the new list to create.
      */
     public void createNewList(String boardName, String listName) {
         clickOnBoard(boardName);
@@ -221,7 +225,42 @@ public class DeckPage extends BasePage {
     /**
      * Clicks the close sidebar button.
      */
-    public void clickCloseSideBarButton(){
+    public void clickCloseSideBarButton() {
         closeSideBarButton.click();
+    }
+
+
+    /**
+     * Deletes all boards listed on the page.
+     * This method iterates through all boards listed on the page and deletes them one by one.
+     * It clicks on the three-dot menu button for each board,
+     * then clicks on the "Delete board" option,
+     * and finally confirms the deletion action.
+     * This method assumes that the user is already on the
+     * page containing the list of boards.
+     * Note: This method can be used to clean up the environment after testing or to reset the state
+     * of the application. Use with caution as it permanently deletes boards and their associated data.
+     */
+    public void deleteAllBoards() {
+
+        for (WebElement eachBoard : allBoardsInList) {
+
+            BrowserUtils.waitFor(3);
+
+            WebElement threeDotButton = Driver.getDriver().findElement(
+                    By.xpath("//span[@title='" + eachBoard.getText() + "']/../..//button"));
+            actions.click(threeDotButton).perform();
+
+
+            WebElement deleteButton = Driver.getDriver().findElement(
+                    By.xpath("//span[.='Delete board']"));
+            actions.click(deleteButton).perform();
+
+
+            WebElement deleteButtonOnConfirmationMessage = Driver.getDriver().findElement(
+                    By.xpath("(//button[.='Delete'])"));
+            actions.click(deleteButtonOnConfirmationMessage).perform();
+
+        }
     }
 }
