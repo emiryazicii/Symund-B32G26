@@ -1,5 +1,4 @@
 
-@wip
 Feature: Add File To Favorites Rename Add Comment
   As a user, I should be able to add a file to favorites,
   rename any file and give some comments on any file.
@@ -50,16 +49,16 @@ Feature: Add File To Favorites Rename Add Comment
     And all test passed file "<updatedFileName>" removes from favorite
 
     Examples:
-      | fileName    | updatedFileName |
-      | Talk        | Grisha          |
-      | Hello World | Salam World     |
-      | Readme      | Hidden Jem      |
+      | updatedFileName |
+      | Grisha          |
+      | Salam World     |
+      | Hidden Jem      |
 
   Scenario:
     And user should delete folder Grisha
 
-    Scenario Outline:
-      When user choose Rename file name "<fileName>" to file name "<updatedFileName>"
+  Scenario Outline:
+    When user choose Rename file name "<fileName>" to file name "<updatedFileName>"
 
     Examples:
       | fileName    | updatedFileName |
