@@ -66,4 +66,9 @@ public class DeckStepDefs {
     public void the_card_should_be_assigned_to_current_user(String cardName) {
         Assert.assertTrue(deckPage.isCardAssignToUser(cardName));
     }
+
+    @Given("user deletes all the boards")
+    public void userDeletesAllTheBoards() {
+        deckPage.deleteAllBoards();
+    }
 }
