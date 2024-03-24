@@ -1,0 +1,79 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Mar 24 04:31:26 GMT 2024","Sun Mar 24 04:31:32 GMT 2024","5786","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:27:07 GMT 2024","Sun Mar 24 04:27:20 GMT 2024","12799","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:22:33 GMT 2024","Sun Mar 24 04:22:49 GMT 2024","15439","","Deck Management","","User can create a new list of card under any board","","User can create a new list of card under any board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:32:09 GMT 2024","Sun Mar 24 04:32:15 GMT 2024","5891","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:31:57 GMT 2024","Sun Mar 24 04:32:09 GMT 2024","11433","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:30:03 GMT 2024","Sun Mar 24 04:30:18 GMT 2024","15048","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:30:18 GMT 2024","Sun Mar 24 04:30:33 GMT 2024","15323","","US-002 - Upload/Edit/Delete File Module Functionality","","User can upload a file","","User can upload a file","  Agile story : As a user, I should be able to upload a file, move or delete any selected file under the Files module"
+"passed","Sun Mar 24 04:21:19 GMT 2024","Sun Mar 24 04:21:35 GMT 2024","15671","","Deck Management","","User can create a new board","","User can create a new board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:30:33 GMT 2024","Sun Mar 24 04:30:49 GMT 2024","15955","","US-002 - Upload/Edit/Delete File Module Functionality","","User can create a new folder","","User can create a new folder","  Agile story : As a user, I should be able to upload a file, move or delete any selected file under the Files module"
+"passed","Sun Mar 24 04:23:50 GMT 2024","Sun Mar 24 04:24:06 GMT 2024","16069","","Deck Management","","User can add a new card on any list on the current board","","User can add a new card on any list on the current board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:20:49 GMT 2024","Sun Mar 24 04:21:19 GMT 2024","29813","","Calendar module functionality","","user can create a new event under the Calendar module","","user can create a new event under the Calendar module","  User Story :
+  As a user, I should be able to see Daily-Weekly-Monthly calendar view
+  and create a new event under the Calendar module US-005"
+"passed","Sun Mar 24 04:28:10 GMT 2024","Sun Mar 24 04:28:25 GMT 2024","15247","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:29:20 GMT 2024","Sun Mar 24 04:29:32 GMT 2024","12479","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"broken","Sun Mar 24 04:26:32 GMT 2024","Sun Mar 24 04:26:54 GMT 2024","22143","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:31:03 GMT 2024","Sun Mar 24 04:31:17 GMT 2024","13286","","US-002 - Upload/Edit/Delete File Module Functionality","","User can see the total number of files and folders under the files list table","","User can see the total number of files and folders under the files list table","  Agile story : As a user, I should be able to upload a file, move or delete any selected file under the Files module"
+"passed","Sun Mar 24 04:32:15 GMT 2024","Sun Mar 24 04:32:21 GMT 2024","5784","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:29:32 GMT 2024","Sun Mar 24 04:29:48 GMT 2024","15876","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:29:08 GMT 2024","Sun Mar 24 04:29:20 GMT 2024","11750","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:23:34 GMT 2024","Sun Mar 24 04:23:50 GMT 2024","15731","","Deck Management","","User can create a new list of card under any board","","User can create a new list of card under any board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:24:37 GMT 2024","Sun Mar 24 04:24:53 GMT 2024","16151","","Deck Management","","User can add a new card on any list on the current board","","User can add a new card on any list on the current board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:19:58 GMT 2024","Sun Mar 24 04:20:29 GMT 2024","30430","","Calendar module functionality","","user can display daily calendar view","","user can display daily calendar view","  User Story :
+  As a user, I should be able to see Daily-Weekly-Monthly calendar view
+  and create a new event under the Calendar module US-005"
+"passed","Sun Mar 24 04:22:04 GMT 2024","Sun Mar 24 04:22:18 GMT 2024","13963","","Deck Management","","User can create a new board","","User can create a new board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:30:49 GMT 2024","Sun Mar 24 04:31:03 GMT 2024","14436","","US-002 - Upload/Edit/Delete File Module Functionality","","User can delete any selected item from its three dots menu","","User can delete any selected item from its three dots menu","  Agile story : As a user, I should be able to upload a file, move or delete any selected file under the Files module"
+"passed","Sun Mar 24 04:23:19 GMT 2024","Sun Mar 24 04:23:34 GMT 2024","15349","","Deck Management","","User can create a new list of card under any board","","User can create a new list of card under any board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:27:37 GMT 2024","Sun Mar 24 04:27:53 GMT 2024","16614","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:21:49 GMT 2024","Sun Mar 24 04:22:04 GMT 2024","15016","","Deck Management","","User can create a new board","","User can create a new board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:24:06 GMT 2024","Sun Mar 24 04:24:21 GMT 2024","15079","","Deck Management","","User can add a new card on any list on the current board","","User can add a new card on any list on the current board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:26:00 GMT 2024","Sun Mar 24 04:26:16 GMT 2024","15910","","Deck Management","","User can assign a card to themselves","","User can assign a card to themselves","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:27:20 GMT 2024","Sun Mar 24 04:27:37 GMT 2024","16916","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:25:44 GMT 2024","Sun Mar 24 04:26:00 GMT 2024","16594","","Deck Management","","User can assign a card to themselves","","User can assign a card to themselves","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:31:32 GMT 2024","Sun Mar 24 04:31:38 GMT 2024","6297","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:26:54 GMT 2024","Sun Mar 24 04:27:07 GMT 2024","12853","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:20:29 GMT 2024","Sun Mar 24 04:20:40 GMT 2024","11858","","Calendar module functionality","","user can display weekly calendar view","","user can display weekly calendar view","  User Story :
+  As a user, I should be able to see Daily-Weekly-Monthly calendar view
+  and create a new event under the Calendar module US-005"
+"passed","Sun Mar 24 04:32:26 GMT 2024","Sun Mar 24 04:32:32 GMT 2024","6177","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:29:48 GMT 2024","Sun Mar 24 04:30:03 GMT 2024","14513","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:22:49 GMT 2024","Sun Mar 24 04:23:03 GMT 2024","14806","","Deck Management","","User can create a new list of card under any board","","User can create a new list of card under any board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:26:16 GMT 2024","Sun Mar 24 04:26:32 GMT 2024","15971","","Deck Management","","User can assign a card to themselves","","User can assign a card to themselves","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:21:35 GMT 2024","Sun Mar 24 04:21:49 GMT 2024","14290","","Deck Management","","User can create a new board","","User can create a new board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:32:32 GMT 2024","Sun Mar 24 04:32:41 GMT 2024","9007","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:25:28 GMT 2024","Sun Mar 24 04:25:44 GMT 2024","15983","","Deck Management","","User can assign a card to themselves","","User can assign a card to themselves","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:24:53 GMT 2024","Sun Mar 24 04:25:10 GMT 2024","17037","","Deck Management","","User can add a new card on any list on the current board","","User can add a new card on any list on the current board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:31:44 GMT 2024","Sun Mar 24 04:31:52 GMT 2024","7521","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:32:21 GMT 2024","Sun Mar 24 04:32:26 GMT 2024","5732","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:28:25 GMT 2024","Sun Mar 24 04:28:40 GMT 2024","15115","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:22:18 GMT 2024","Sun Mar 24 04:22:33 GMT 2024","15062","","Deck Management","","User can create a new board","","User can create a new board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:27:53 GMT 2024","Sun Mar 24 04:28:10 GMT 2024","16650","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:25:10 GMT 2024","Sun Mar 24 04:25:28 GMT 2024","17127","","Deck Management","","User can assign a card to themselves","","User can assign a card to themselves","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:28:40 GMT 2024","Sun Mar 24 04:28:56 GMT 2024","15153","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:31:38 GMT 2024","Sun Mar 24 04:31:44 GMT 2024","5552","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:28:56 GMT 2024","Sun Mar 24 04:29:08 GMT 2024","12334","","Add File To Favorites Rename Add Comment","","","","","  As a user, I should be able to add a file to favorites,
+  rename any file and give some comments on any file."
+"passed","Sun Mar 24 04:24:21 GMT 2024","Sun Mar 24 04:24:37 GMT 2024","15848","","Deck Management","","User can add a new card on any list on the current board","","User can add a new card on any list on the current board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:31:17 GMT 2024","Sun Mar 24 04:31:26 GMT 2024","9786","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:23:03 GMT 2024","Sun Mar 24 04:23:19 GMT 2024","15630","","Deck Management","","User can create a new list of card under any board","","User can create a new list of card under any board","  As a user, I should be able to manage my works by creating a new board/list/card and modifying them under Deck Module."
+"passed","Sun Mar 24 04:31:52 GMT 2024","Sun Mar 24 04:31:57 GMT 2024","5902","","Login function","","User can log in with valid credentials","","User can log in with valid credentials",""
+"passed","Sun Mar 24 04:20:40 GMT 2024","Sun Mar 24 04:20:49 GMT 2024","8830","","Calendar module functionality","","user can display monthly calendar view","","user can display monthly calendar view","  User Story :
+  As a user, I should be able to see Daily-Weekly-Monthly calendar view
+  and create a new event under the Calendar module US-005"
